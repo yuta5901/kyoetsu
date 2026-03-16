@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>和装EC 完全統合分析レポート Ver.3.0</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>和装EC 完全統合分析レポート Ver.4.0</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
 
@@ -289,6 +290,15 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
   .insight-box,.insight{padding:10px 12px !important;}
   .insight-text,.insight{font-size:11.5px !important;}
 }
+
+/* ===== Ver.4 追加スタイル ===== */
+#ap-section, #budget-section {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+}
+#ap-section table th, #ap-section table td,
+#budget-section table th, #budget-section table td {
+  vertical-align: middle;
+}
 </style>
 </head>
 <body>
@@ -330,7 +340,6 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 <a href="#s9">⑨ バスケット分析 🆕</a>
 <a href="#s10">⑩ リピート行動 🆕</a>
 <a href="#s11">⑪ 戦略提言</a>
-
 <div style="flex-basis:100%;border-top:1px dashed #C5CEF5;padding-top:8px;margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
 <span style="font-size:10px;font-weight:700;color:#0D7377;letter-spacing:2px;text-transform:uppercase;flex-basis:100%;margin-bottom:2px;">📊 PART 2 | クロス集計分析（全15テーブル）</span>
 <a href="#cx-part1" style="border-color:#4ECDC4;color:#0D7377;">リピート基軸</a>
@@ -350,7 +359,7 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 <a href="#cx-s13" style="border-color:#E85D3A;color:#C0392B;">⑬3重クロス</a>
 <a href="#cx-s14" style="border-color:#6B46C1;color:#6B46C1;">⑭カテゴリ×年代</a>
 <a href="#cx-summary" style="border-color:#6B46C1;color:#6B46C1;">施策マトリクス</a>
-</div>
+<a href="#ap-section" style="display:block;padding:8px 16px;color:inherit;text-decoration:none;font-size:13px;border-left:3px solid #e94560;margin-top:4px;font-weight:700;">📋 実行計画 — 4アクション KPI目標</a><a href="#budget-section" style="display:block;padding:8px 16px;color:inherit;text-decoration:none;font-size:13px;border-left:3px solid #10b981;margin-top:4px;font-weight:700;">💰 予算計画 — 投資・ROI試算</a></div>
 </div>
 <!-- ===== S1: 売上推移 ===== -->
 <div class="section" id="s1">
@@ -921,7 +930,6 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 <div style="font-size:13px;opacity:.85;margin-top:6px;">年代 / 性別 / カテゴリ / 地域 / 決済方法 × リピート・端末 ｜ 全15テーブル詳細分析 ｜ ヒートマップ付き</div>
 </div>
 <div class="container">
-
 <!-- =============================== -->
 <!-- PART 1: リピート基軸              -->
 <!-- =============================== -->
@@ -1348,6 +1356,686 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 <div style="height:36px;"></div>
 </div>
 </div>
-<div class="footer"><strong>和装自社サイト 完全統合分析レポート Ver.3.0</strong><br/>PART1：売上・顧客・RFM・季節性分析 15チャート 11セクション　／　PART2：リピート×端末 クロス集計 15テーブル 14クロス軸<br/>対象期間：2023年1月〜2025年12月 ｜ 受注23,595件 ｜ 本資料は社外秘です</div>
+
+<div id="ap-section" style="margin-top:48px;">
+
+  <!-- ===== Section Banner ===== -->
+  <div style="background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;border-radius:16px;padding:32px 36px;margin-bottom:36px;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(233,69,96,0.12);"></div>
+    <div style="position:absolute;bottom:-30px;left:-20px;width:150px;height:150px;border-radius:50%;background:rgba(33,150,243,0.10);"></div>
+    <div style="position:relative;z-index:1;">
+      <span style="display:inline-block;background:#e94560;color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:12px;">PART 3 — 実行計画 &amp; 予算</span>
+      <h2 style="font-size:clamp(20px,3vw,32px);font-weight:900;margin-bottom:8px;">最重要アクション 4項目<br>実行スケジュール &amp; KPI目標</h2>
+      <p style="font-size:13px;color:rgba(255,255,255,0.7);">データドリブン分析（23,595件）に基づく 3ヶ月 / 6ヶ月 / 12ヶ月 ロードマップ</p>
+    </div>
+  </div>
+
+  <!-- ===== 4 Action Overview Cards ===== -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-bottom:40px;">
+
+    <div style="background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,0.07);border-top:4px solid #e94560;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-8px;right:14px;font-size:64px;font-weight:900;color:rgba(233,69,96,0.06);line-height:1;">01</div>
+      <span style="display:inline-block;background:#e94560;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;">🎯 Action 01</span>
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;line-height:1.4;">高年齢男性PC層<br>サブスク・ロイヤルティ</h3>
+      <div style="font-size:12px;color:#6b7280;background:#f8f9fc;border-radius:8px;padding:8px 10px;">
+        <strong style="color:#1a1a2e;">根拠：</strong>70代男性リピート率 <strong>32.5%</strong>（全体4.6倍）<br>PC利用者リピート率 <strong>15.7%</strong>（スマホの2倍）
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,0.07);border-top:4px solid #2196f3;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-8px;right:14px;font-size:64px;font-weight:900;color:rgba(33,150,243,0.06);line-height:1;">02</div>
+      <span style="display:inline-block;background:#2196f3;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;">📧 Action 02</span>
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;line-height:1.4;">スマホ購入後<br>ステップメール</h3>
+      <div style="font-size:12px;color:#6b7280;background:#f8f9fc;border-radius:8px;padding:8px 10px;">
+        <strong style="color:#1a1a2e;">根拠：</strong>スマホ占有 <strong>87.7%</strong>・リピート差 <strong>×2倍</strong><br>中央値再購買間隔 <strong>24日</strong>で施策効果大
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,0.07);border-top:4px solid #9c27b0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-8px;right:14px;font-size:64px;font-weight:900;color:rgba(156,39,176,0.06);line-height:1;">03</div>
+      <span style="display:inline-block;background:#9c27b0;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;">🛍 Action 03</span>
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;line-height:1.4;">男性バンドル<br>定期購入設計</h3>
+      <div style="font-size:12px;color:#6b7280;background:#f8f9fc;border-radius:8px;padding:8px 10px;">
+        <strong style="color:#1a1a2e;">根拠：</strong>男性リピート率 <strong>16.8%</strong>（女性の2.5倍）<br>消耗品カテゴリ リピート <strong>9〜12%</strong>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,0.07);border-top:4px solid #ff9800;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-8px;right:14px;font-size:64px;font-weight:900;color:rgba(255,152,0,0.06);line-height:1;">04</div>
+      <span style="display:inline-block;background:#ff9800;color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;">🎋 Action 04</span>
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:8px;line-height:1.4;">七五三3年周期<br>リマインダー追客</h3>
+      <div style="font-size:12px;color:#6b7280;background:#f8f9fc;border-radius:8px;padding:8px 10px;">
+        <strong style="color:#1a1a2e;">根拠：</strong>七五三リピート率 <strong>3.8%</strong>（最低）<br>休眠回収ポテンシャル <strong>¥55.9M</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== Master Gantt Chart ===== -->
+  <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.07);overflow:hidden;margin-bottom:40px;">
+    <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;padding:18px 26px;font-size:15px;font-weight:700;">
+      📅 統合実行スケジュール（12ヶ月 月別ガントチャート）
+    </div>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+      <thead>
+        <tr>
+          <th style="padding:10px 12px;background:#f1f5f9;border:1px solid #e5e7eb;min-width:170px;text-align:left;">アクション</th>
+          <th colspan="3" style="padding:8px;background:#eef2ff;color:#6366f1;border:1px solid #e5e7eb;text-align:center;font-size:11px;">Phase 1｜準備・ローンチ（〜3ヶ月）</th>
+          <th colspan="3" style="padding:8px;background:#f0fdf4;color:#10b981;border:1px solid #e5e7eb;text-align:center;font-size:11px;">Phase 2｜検証・改善（4〜6ヶ月）</th>
+          <th colspan="6" style="padding:8px;background:#fffbeb;color:#f59e0b;border:1px solid #e5e7eb;text-align:center;font-size:11px;">Phase 3｜スケール・定着（7〜12ヶ月）</th>
+        </tr>
+        <tr>
+          <th style="padding:8px 12px;background:#f8f9fc;border:1px solid #e5e7eb;"></th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M1</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M2</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M3</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M4</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M5</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M6</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M7</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M8</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M9</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M10</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M11</th>
+          <th style="padding:8px 6px;background:#f1f5f9;border:1px solid #e5e7eb;text-align:center;width:56px;">M12</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:9px 12px;border:1px solid #e5e7eb;font-weight:700;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#e94560;margin-right:6px;"></span>A1 サブスク</td>
+          <td style="border:1px solid #e5e7eb;background:#fef2f2;text-align:center;font-size:11px;color:#e94560;font-weight:600;">△設計</td>
+          <td style="border:1px solid #e5e7eb;background:#fecaca;text-align:center;font-size:11px;color:#b91c1c;font-weight:700;">◎構築</td>
+          <td style="border:1px solid #e5e7eb;background:#f87171;text-align:center;font-size:11px;color:#fff;font-weight:700;">◎β版</td>
+          <td style="border:1px solid #e5e7eb;background:#ef4444;text-align:center;font-size:11px;color:#fff;font-weight:700;">◎本開</td>
+          <td style="border:1px solid #e5e7eb;background:#dc2626;text-align:center;font-size:11px;color:#fff;">○運用</td>
+          <td style="border:1px solid #e5e7eb;background:#dc2626;text-align:center;font-size:11px;color:#fff;">○KPI</td>
+          <td style="border:1px solid #e5e7eb;background:#b91c1c;text-align:center;font-size:11px;color:#fff;">○拡大</td>
+          <td style="border:1px solid #e5e7eb;background:#991b1b;text-align:center;font-size:11px;color:#fff;">○VIP</td>
+          <td style="border:1px solid #e5e7eb;background:#991b1b;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#991b1b;text-align:center;font-size:11px;color:#fff;">○紹介</td>
+          <td style="border:1px solid #e5e7eb;background:#7f1d1d;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#7f1d1d;text-align:center;font-size:11px;color:#fff;">◎評価</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;border:1px solid #e5e7eb;font-weight:700;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#2196f3;margin-right:6px;"></span>A2 ステップ</td>
+          <td style="border:1px solid #e5e7eb;background:#eff6ff;text-align:center;font-size:11px;color:#2196f3;font-weight:600;">△設計</td>
+          <td style="border:1px solid #e5e7eb;background:#bfdbfe;text-align:center;font-size:11px;color:#1d4ed8;font-weight:700;">◎メール</td>
+          <td style="border:1px solid #e5e7eb;background:#60a5fa;text-align:center;font-size:11px;color:#fff;font-weight:700;">◎配信</td>
+          <td style="border:1px solid #e5e7eb;background:#3b82f6;text-align:center;font-size:11px;color:#fff;font-weight:700;">ABテスト</td>
+          <td style="border:1px solid #e5e7eb;background:#2563eb;text-align:center;font-size:11px;color:#fff;">○最適</td>
+          <td style="border:1px solid #e5e7eb;background:#1d4ed8;text-align:center;font-size:11px;color:#fff;">◎測定</td>
+          <td style="border:1px solid #e5e7eb;background:#1e40af;text-align:center;font-size:11px;color:#fff;">○個別</td>
+          <td style="border:1px solid #e5e7eb;background:#1e3a8a;text-align:center;font-size:11px;color:#fff;">○LINE</td>
+          <td style="border:1px solid #e5e7eb;background:#1e3a8a;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#172554;text-align:center;font-size:11px;color:#fff;">○推薦</td>
+          <td style="border:1px solid #e5e7eb;background:#172554;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#172554;text-align:center;font-size:11px;color:#fff;">◎評価</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;border:1px solid #e5e7eb;font-weight:700;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9c27b0;margin-right:6px;"></span>A3 バンドル</td>
+          <td style="border:1px solid #e5e7eb;background:#faf5ff;text-align:center;font-size:11px;color:#9c27b0;font-weight:600;">△選定</td>
+          <td style="border:1px solid #e5e7eb;background:#e9d5ff;text-align:center;font-size:11px;color:#7e22ce;font-weight:600;">△設計</td>
+          <td style="border:1px solid #e5e7eb;background:#c084fc;text-align:center;font-size:11px;color:#fff;font-weight:700;">◎公開</td>
+          <td style="border:1px solid #e5e7eb;background:#a855f7;text-align:center;font-size:11px;color:#fff;font-weight:700;">○父の日</td>
+          <td style="border:1px solid #e5e7eb;background:#9333ea;text-align:center;font-size:11px;color:#fff;">○定期</td>
+          <td style="border:1px solid #e5e7eb;background:#7e22ce;text-align:center;font-size:11px;color:#fff;">◎測定</td>
+          <td style="border:1px solid #e5e7eb;background:#6b21a8;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#581c87;text-align:center;font-size:11px;color:#fff;">○秋冬</td>
+          <td style="border:1px solid #e5e7eb;background:#581c87;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#4a044e;text-align:center;font-size:11px;color:#fff;">○統合</td>
+          <td style="border:1px solid #e5e7eb;background:#4a044e;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#3b0764;text-align:center;font-size:11px;color:#fff;">◎評価</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 12px;border:1px solid #e5e7eb;font-weight:700;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#ff9800;margin-right:6px;"></span>A4 七五三</td>
+          <td style="border:1px solid #e5e7eb;background:#fffbeb;text-align:center;font-size:11px;color:#f59e0b;font-weight:600;">△抽出</td>
+          <td style="border:1px solid #e5e7eb;background:#fef3c7;text-align:center;font-size:11px;color:#d97706;font-weight:600;">△設計</td>
+          <td style="border:1px solid #e5e7eb;background:#fcd34d;text-align:center;font-size:11px;color:#92400e;font-weight:700;">◎初DM</td>
+          <td style="border:1px solid #e5e7eb;background:#fbbf24;text-align:center;font-size:11px;color:#78350f;font-weight:700;">○早割</td>
+          <td style="border:1px solid #e5e7eb;background:#f59e0b;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#d97706;text-align:center;font-size:11px;color:#fff;">◎測定</td>
+          <td style="border:1px solid #e5e7eb;background:#b45309;text-align:center;font-size:11px;color:#fff;">○浴衣</td>
+          <td style="border:1px solid #e5e7eb;background:#92400e;text-align:center;font-size:11px;color:#fff;">○</td>
+          <td style="border:1px solid #e5e7eb;background:#78350f;text-align:center;font-size:11px;color:#fff;">◎本番</td>
+          <td style="border:1px solid #e5e7eb;background:#78350f;text-align:center;font-size:11px;color:#fff;">○七五三</td>
+          <td style="border:1px solid #e5e7eb;background:#451a03;text-align:center;font-size:11px;color:#fff;">◎七五三</td>
+          <td style="border:1px solid #e5e7eb;background:#451a03;text-align:center;font-size:11px;color:#fff;">◎評価</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- ===== KPI Targets Table ===== -->
+  <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.07);overflow:hidden;margin-bottom:40px;">
+    <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:18px 26px;font-size:15px;font-weight:700;">
+      📏 アクション別 KPI目標値一覧
+    </div>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr>
+          <th style="padding:11px 14px;background:#1a1a2e;color:#fff;text-align:left;min-width:160px;">施策</th>
+          <th style="padding:11px 14px;background:#1a1a2e;color:#fff;text-align:left;min-width:180px;">KPI指標</th>
+          <th style="padding:11px 14px;background:#374151;color:#9ca3af;text-align:center;">現状値</th>
+          <th style="padding:11px 14px;background:#312e81;color:#a5b4fc;text-align:center;">3ヶ月目標</th>
+          <th style="padding:11px 14px;background:#14532d;color:#86efac;text-align:center;">6ヶ月目標</th>
+          <th style="padding:11px 14px;background:#78350f;color:#fde68a;text-align:center;">12ヶ月目標</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fef2f2;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:700;color:#e94560;" rowspan="3">🎯 A1<br>サブスク</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">ロイヤルティ登録率</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">0%（未実施）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">β登録 30%<br>（約1,300名）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">一般 20%<br>（約3,500名）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">35%<br>（約6,200名）</td>
+        </tr>
+        <tr style="background:#fef2f2;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">対象リピート率（70代男性PC）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">32.5%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">35%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">40%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">50%</td>
+        </tr>
+        <tr style="background:#fef2f2;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">会員顧客 平均LTV</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥9,758</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">¥10,000</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">¥11,000</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">¥13,000（+33%）</td>
+        </tr>
+        <tr style="background:#eff6ff;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:700;color:#2196f3;" rowspan="3">📧 A2<br>ステップ</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">スマホ30日内リピート率</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">推定2〜3%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">5%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">8%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">12%（+4〜10pt）</td>
+        </tr>
+        <tr style="background:#eff6ff;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">メール開封率（7日目）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">—（未配信）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">25%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">30%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">35%</td>
+        </tr>
+        <tr style="background:#eff6ff;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">メール起因 月間追加売上</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥0</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">+¥200万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥500万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">+¥1,200万</td>
+        </tr>
+        <tr style="background:#faf5ff;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:700;color:#9c27b0;" rowspan="3">🛍 A3<br>バンドル</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">男性リピート率</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">16.8%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">18%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">22%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">28%（+11pt）</td>
+        </tr>
+        <tr style="background:#faf5ff;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">定期購入者数</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">0名</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">50名</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">200名</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">500名</td>
+        </tr>
+        <tr style="background:#faf5ff;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">バンドル起因 月間売上</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥0</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">+¥50万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥150万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">+¥500万/年</td>
+        </tr>
+        <tr style="background:#fffbeb;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:700;color:#ff9800;" rowspan="3">🎋 A4<br>七五三</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">七五三リピート率</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">3.8%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">6%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">10%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">18%（+14pt）</td>
+        </tr>
+        <tr style="background:#fffbeb;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">リマインダー転換率</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">0%（未配信）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">5%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">10%</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">15〜20%</td>
+        </tr>
+        <tr style="background:#fffbeb;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">七五三追客 年間追加売上</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥0</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:700;">+¥100万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥300万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:700;">+¥800万</td>
+        </tr>
+        <tr style="background:#f0fdf4;font-weight:700;">
+          <td colspan="2" style="padding:12px 14px;border:1px solid #e5e7eb;font-weight:800;color:#15803d;">📈 全体リピート率（4施策合計寄与）</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;font-weight:700;">7.1%</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:800;">8%</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:800;">10%</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:800;">12%（目標）</td>
+        </tr>
+        <tr style="background:#f0fdf4;font-weight:700;">
+          <td colspan="2" style="padding:12px 14px;border:1px solid #e5e7eb;font-weight:800;color:#15803d;">💰 4施策 合計追加売上（年間）</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;font-weight:700;">¥0</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-weight:800;">+¥350万</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:800;">+¥950万</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-weight:800;">+¥2,500〜3,000万</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+</div>
+
+
+<div id="budget-section" style="margin-top:48px;">
+
+  <!-- ===== Section Banner ===== -->
+  <div style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);color:#fff;border-radius:16px;padding:32px 36px;margin-bottom:36px;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(52,211,153,0.12);"></div>
+    <div style="position:absolute;bottom:-30px;left:-20px;width:150px;height:150px;border-radius:50%;background:rgba(16,185,129,0.10);"></div>
+    <div style="position:relative;z-index:1;">
+      <span style="display:inline-block;background:#10b981;color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:12px;">PART 3 — 予算計画書</span>
+      <h2 style="font-size:clamp(20px,3vw,32px);font-weight:900;margin-bottom:8px;">投資予算計画 &amp; ROI試算<br>4施策 12ヶ月ロードマップ</h2>
+      <p style="font-size:13px;color:rgba(255,255,255,0.75);">初期投資・運用コスト・期待売上・ROI を施策別・フェーズ別に試算</p>
+    </div>
+  </div>
+
+  <!-- ===== Budget Summary KPI ===== -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:36px;">
+    <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.07);text-align:center;border-top:3px solid #e94560;">
+      <div style="font-size:28px;font-weight:900;color:#e94560;">¥480万</div>
+      <div style="font-size:12px;color:#6b7280;margin-top:4px;">12ヶ月 総投資額（目安）</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.07);text-align:center;border-top:3px solid #10b981;">
+      <div style="font-size:28px;font-weight:900;color:#10b981;">¥2,700万</div>
+      <div style="font-size:12px;color:#6b7280;margin-top:4px;">12ヶ月 期待追加売上</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.07);text-align:center;border-top:3px solid #3b82f6;">
+      <div style="font-size:28px;font-weight:900;color:#3b82f6;">5.6倍</div>
+      <div style="font-size:12px;color:#6b7280;margin-top:4px;">期待ROI（投資対効果）</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.07);text-align:center;border-top:3px solid #f59e0b;">
+      <div style="font-size:28px;font-weight:900;color:#f59e0b;">4〜6ヶ月</div>
+      <div style="font-size:12px;color:#6b7280;margin-top:4px;">投資回収期間（目安）</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.07);text-align:center;border-top:3px solid #9c27b0;">
+      <div style="font-size:28px;font-weight:900;color:#9c27b0;">¥2,220万</div>
+      <div style="font-size:12px;color:#6b7280;margin-top:4px;">12ヶ月 純利益増（粗利60%想定）</div>
+    </div>
+  </div>
+
+  <!-- ===== Detailed Budget Table ===== -->
+  <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.07);overflow:hidden;margin-bottom:36px;">
+    <div style="background:linear-gradient(135deg,#064e3b,#065f46);color:#fff;padding:18px 26px;font-size:15px;font-weight:700;">
+      💰 施策別 詳細予算明細（12ヶ月）
+    </div>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr>
+          <th style="padding:11px 14px;background:#064e3b;color:#fff;text-align:left;min-width:160px;">費目</th>
+          <th style="padding:11px 14px;background:#065f46;color:#fff;text-align:left;min-width:200px;">内容</th>
+          <th style="padding:11px 14px;background:#374151;color:#d1fae5;text-align:center;min-width:100px;">Phase1<br>〜3ヶ月</th>
+          <th style="padding:11px 14px;background:#374151;color:#d1fae5;text-align:center;min-width:100px;">Phase2<br>4〜6ヶ月</th>
+          <th style="padding:11px 14px;background:#374151;color:#d1fae5;text-align:center;min-width:100px;">Phase3<br>7〜12ヶ月</th>
+          <th style="padding:11px 14px;background:#1a1a2e;color:#fde68a;text-align:center;min-width:100px;">年間合計</th>
+          <th style="padding:11px 14px;background:#1a1a2e;color:#fde68a;text-align:center;min-width:80px;">優先度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- A1 サブスク -->
+        <tr style="background:#fef2f2;">
+          <td colspan="7" style="padding:9px 14px;border:1px solid #e5e7eb;font-weight:800;color:#b91c1c;font-size:13px;background:#fee2e2;">🎯 Action 01 ｜ サブスク・ロイヤルティプログラム</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">システム開発費</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">会員DB・ポイント管理・マイページ実装</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥80万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥10万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥10万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥100万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">最高</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">特典原価（ポイント・クーポン）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">ポイント引当・限定商品コスト（売上の2〜3%）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥15万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥50万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">デザイン・LP制作</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">会員LP・招待メールテンプレート制作</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥15万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥25万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+        <tr style="background:#f9fafb;font-weight:700;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;" colspan="2">A1 小計</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;">¥100万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;">¥45万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#e94560;font-size:14px;">¥175万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-size:12px;">ROI 目安 4〜6倍</td>
+        </tr>
+
+        <!-- A2 ステップメール -->
+        <tr style="background:#eff6ff;">
+          <td colspan="7" style="padding:9px 14px;border:1px solid #e5e7eb;font-weight:800;color:#1d4ed8;font-size:13px;background:#dbeafe;">📧 Action 02 ｜ スマホ ステップメール</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">MAツール 月額費用</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">メール配信・自動化ツール（例：Klaviyo / MOTENASU等）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥9万<br><span style="font-size:11px;font-weight:400;color:#6b7280;">（¥3万×3ヶ月）</span></td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥9万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥18万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥36万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">最高</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">メール設計・ライティング</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">7ステップシナリオ設計・HTML制作・カテゴリ別カスタム</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥20万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">クーポン原価</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">14日目クーポン（5〜10%OFF）の原価引当</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">—</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥10万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥24万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥34万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+        <tr style="background:#f9fafb;font-weight:700;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;" colspan="2">A2 小計</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;">¥29万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;">¥24万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;">¥47万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#2196f3;font-size:14px;">¥100万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-size:12px;">ROI 目安 12倍</td>
+        </tr>
+
+        <!-- A3 バンドル -->
+        <tr style="background:#faf5ff;">
+          <td colspan="7" style="padding:9px 14px;border:1px solid #e5e7eb;font-weight:800;color:#7e22ce;font-size:13px;background:#e9d5ff;">🛍 Action 03 ｜ 男性バンドル・定期購入</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">商品企画・仕入れ増強</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">バンドル構成商品の追加仕入れ（初回在庫）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥20万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥80万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">最高</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">ECサイト 定期購入機能</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">定期購入サブスク機能のシステム実装</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥20万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">—</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥25万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">最高</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">プロモーション費（父の日等）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">季節キャンペーン広告・メール・SNS運用</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">—</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥20万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥10万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+        <tr style="background:#f9fafb;font-weight:700;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;" colspan="2">A3 小計</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;">¥50万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;">¥40万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;">¥45万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#9c27b0;font-size:14px;">¥135万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-size:12px;">ROI 目安 3.7倍</td>
+        </tr>
+
+        <!-- A4 七五三 -->
+        <tr style="background:#fffbeb;">
+          <td colspan="7" style="padding:9px 14px;border:1px solid #e5e7eb;font-weight:800;color:#92400e;font-size:13px;background:#fde68a;">🎋 Action 04 ｜ 七五三リマインダー追客</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">MA設定・シナリオ実装</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">自動トリガー設定・セグメント抽出・配信設計</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥15万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥25万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">最高</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">DM・クリエイティブ制作</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">リマインダーメール・七五三特設LP・クーポン</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥15万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥5万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥10万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">七五三シーズン広告費</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">9〜11月 季節広告（リスティング・SNS）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">—</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;">—</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥15万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥15万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+        <tr style="background:#f9fafb;font-weight:700;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;" colspan="2">A4 小計</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;">¥10万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;">¥30万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#ff9800;font-size:14px;">¥70万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-size:12px;">ROI 目安 11倍</td>
+        </tr>
+
+        <!-- 共通基盤 -->
+        <tr style="background:#f1f5f9;">
+          <td colspan="7" style="padding:9px 14px;border:1px solid #e5e7eb;font-weight:800;color:#374151;font-size:13px;">🔧 共通基盤コスト</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">データ整備・分析工数</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;color:#6b7280;">月次KPI集計・レポート作成・データクレンジング</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥9万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥9万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;">¥18万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;font-weight:700;color:#1a1a2e;">¥36万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;"><span style="background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;">中</span></td>
+        </tr>
+
+        <!-- 合計行 -->
+        <tr style="background:#1a1a2e;color:#fff;font-weight:800;font-size:14px;">
+          <td style="padding:14px 16px;border:1px solid #374151;" colspan="2">📊 全体 合計予算</td>
+          <td style="padding:14px 16px;border:1px solid #374151;text-align:center;color:#a5b4fc;">¥218万</td>
+          <td style="padding:14px 16px;border:1px solid #374151;text-align:center;color:#86efac;">¥113万</td>
+          <td style="padding:14px 16px;border:1px solid #374151;text-align:center;color:#fde68a;">¥185万</td>
+          <td style="padding:14px 16px;border:1px solid #374151;text-align:center;color:#fbbf24;font-size:17px;">¥516万</td>
+          <td style="padding:14px 16px;border:1px solid #374151;text-align:center;color:#34d399;">ROI 5.2倍</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- ===== ROI Simulation Table ===== -->
+  <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.07);overflow:hidden;margin-bottom:36px;">
+    <div style="background:linear-gradient(135deg,#1e3a5f,#1a1a2e);color:#fff;padding:18px 26px;font-size:15px;font-weight:700;">
+      📊 ROI試算シミュレーション（月次累計）
+    </div>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr>
+          <th style="padding:10px 14px;background:#1a1a2e;color:#fff;text-align:left;">項目</th>
+          <th style="padding:10px 14px;background:#312e81;color:#a5b4fc;text-align:center;">M1〜M3累計</th>
+          <th style="padding:10px 14px;background:#14532d;color:#86efac;text-align:center;">M1〜M6累計</th>
+          <th style="padding:10px 14px;background:#78350f;color:#fde68a;text-align:center;">M1〜M12累計</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">投資額（累計）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#e94560;font-weight:700;">¥218万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#e94560;font-weight:700;">¥331万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#e94560;font-weight:700;">¥516万</td>
+        </tr>
+        <tr style="background:#f8f9fc;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">期待追加売上（累計）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#2196f3;font-weight:700;">+¥350万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#2196f3;font-weight:700;">+¥950万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#2196f3;font-weight:700;">+¥2,700万</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">粗利貢献（粗利率60%想定）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥210万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥570万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥1,620万</td>
+        </tr>
+        <tr style="background:#f8f9fc;">
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;font-weight:600;">純利益増（粗利 − 投資）</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#6b7280;font-weight:700;">▲ ¥8万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥239万</td>
+          <td style="padding:10px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-weight:700;">+¥1,104万</td>
+        </tr>
+        <tr style="background:#f0fdf4;font-weight:800;">
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;color:#15803d;">ROI（期待追加売上 ÷ 投資額）</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#6366f1;font-size:16px;">1.6倍</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#10b981;font-size:16px;">2.9倍</td>
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#f59e0b;font-size:18px;">5.2倍 ✅</td>
+        </tr>
+        <tr style="background:#fef9c3;font-weight:700;">
+          <td style="padding:12px 14px;border:1px solid #e5e7eb;color:#854d0e;">投資回収タイミング</td>
+          <td colspan="3" style="padding:12px 14px;border:1px solid #e5e7eb;text-align:center;color:#854d0e;font-size:14px;">
+            📌 M4〜M5（4〜5ヶ月目）に投資回収点突破見込み
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- ===== Budget Allocation Chart (CSS) ===== -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:36px;">
+
+    <!-- Donut-like allocation -->
+    <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.07);padding:28px;">
+      <h4 style="font-size:15px;font-weight:700;margin-bottom:20px;">💡 施策別 予算配分（¥516万）</h4>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
+            <span><span style="color:#e94560;font-weight:700;">A1</span> サブスク・ロイヤルティ</span>
+            <span style="font-weight:700;">¥175万（33.9%）</span>
+          </div>
+          <div style="height:10px;background:#e5e7eb;border-radius:5px;overflow:hidden;">
+            <div style="height:100%;width:33.9%;background:#e94560;border-radius:5px;"></div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
+            <span><span style="color:#2196f3;font-weight:700;">A2</span> ステップメール</span>
+            <span style="font-weight:700;">¥100万（19.4%）</span>
+          </div>
+          <div style="height:10px;background:#e5e7eb;border-radius:5px;overflow:hidden;">
+            <div style="height:100%;width:19.4%;background:#2196f3;border-radius:5px;"></div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
+            <span><span style="color:#9c27b0;font-weight:700;">A3</span> 男性バンドル</span>
+            <span style="font-weight:700;">¥135万（26.2%）</span>
+          </div>
+          <div style="height:10px;background:#e5e7eb;border-radius:5px;overflow:hidden;">
+            <div style="height:100%;width:26.2%;background:#9c27b0;border-radius:5px;"></div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
+            <span><span style="color:#ff9800;font-weight:700;">A4</span> 七五三リマインダー</span>
+            <span style="font-weight:700;">¥70万（13.6%）</span>
+          </div>
+          <div style="height:10px;background:#e5e7eb;border-radius:5px;overflow:hidden;">
+            <div style="height:100%;width:13.6%;background:#ff9800;border-radius:5px;"></div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;">
+            <span><span style="color:#6b7280;font-weight:700;">共通</span> データ分析基盤</span>
+            <span style="font-weight:700;">¥36万（7.0%）</span>
+          </div>
+          <div style="height:10px;background:#e5e7eb;border-radius:5px;overflow:hidden;">
+            <div style="height:100%;width:7%;background:#6b7280;border-radius:5px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cost type breakdown -->
+    <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.07);padding:28px;">
+      <h4 style="font-size:15px;font-weight:700;margin-bottom:20px;">🔍 費目別 コスト種別</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:#fef2f2;border-radius:10px;padding:16px;text-align:center;">
+          <div style="font-size:22px;font-weight:900;color:#e94560;">¥195万</div>
+          <div style="font-size:11px;color:#6b7280;margin-top:4px;">初期開発・制作費</div>
+          <div style="font-size:10px;color:#9ca3af;">（1回限り）</div>
+        </div>
+        <div style="background:#eff6ff;border-radius:10px;padding:16px;text-align:center;">
+          <div style="font-size:22px;font-weight:900;color:#2196f3;">¥180万</div>
+          <div style="font-size:11px;color:#6b7280;margin-top:4px;">月次運用費（年間）</div>
+          <div style="font-size:10px;color:#9ca3af;">（継続コスト）</div>
+        </div>
+        <div style="background:#faf5ff;border-radius:10px;padding:16px;text-align:center;">
+          <div style="font-size:22px;font-weight:900;color:#9c27b0;">¥80万</div>
+          <div style="font-size:11px;color:#6b7280;margin-top:4px;">在庫・原価</div>
+          <div style="font-size:10px;color:#9ca3af;">（変動費）</div>
+        </div>
+        <div style="background:#fffbeb;border-radius:10px;padding:16px;text-align:center;">
+          <div style="font-size:22px;font-weight:900;color:#f59e0b;">¥61万</div>
+          <div style="font-size:11px;color:#6b7280;margin-top:4px;">プロモ・広告費</div>
+          <div style="font-size:10px;color:#9ca3af;">（季節変動）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Budget Notice ===== -->
+  <div style="background:#f0fdf4;border-left:4px solid #10b981;border-radius:12px;padding:20px 24px;margin-bottom:24px;display:flex;gap:16px;">
+    <div style="font-size:24px;flex-shrink:0;">💡</div>
+    <div>
+      <h5 style="font-size:13px;font-weight:700;margin-bottom:6px;">予算計画 補足・注意事項</h5>
+      <p style="font-size:12px;color:#374151;line-height:1.7;">
+        ① 上記はあくまで目安の試算値です。MAツール等は既存ツールを活用する場合は大幅削減可能（A2コスト最大¥30万削減）。<br>
+        ② システム開発はNoコード/ローコードツール（Shopify / Salesforce等）を活用することで初期費用の圧縮が可能です。<br>
+        ③ A3の在庫費用は実際の定期購入登録数に連動する変動費のため、段階的に調整可能です。<br>
+        ④ ROI試算は現状データの成長トレンド（YoY +30.4%）を前提にしており、実施効果は市場環境により変動します。<br>
+        ⑤ 最小投資で最大効果を得るには <strong>A2（ROI 12倍）→ A4（ROI 11倍）→ A1（ROI 6倍）→ A3（ROI 3.7倍）</strong> の順で優先することを推奨します。
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer"><strong>和装自社サイト 完全統合分析レポート Ver.4.0</strong><br/>PART1：売上・顧客・RFM・季節性分析 15チャート 11セクション　／　PART2：リピート×端末 クロス集計 15テーブル 14クロス軸<br/>対象期間：2023年1月〜2025年12月 ｜ 受注23,595件 ｜ 本資料は社外秘です</div>
 </body>
 </html>
