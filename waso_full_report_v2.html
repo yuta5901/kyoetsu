@@ -294,10 +294,25 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 /* ===== Ver.4 追加スタイル ===== */
 #ap-section, #budget-section {
   font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
 }
 #ap-section table th, #ap-section table td,
 #budget-section table th, #budget-section table td {
   vertical-align: middle;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  #ap-section, #budget-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
 </style>
 </head>
@@ -1357,7 +1372,7 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 </div>
 </div>
 
-<div id="ap-section" style="margin-top:48px;">
+<div id="ap-section" style="margin-top:48px;max-width:1300px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px;padding-bottom:40px;box-sizing:border-box;">
 
   <!-- ===== Section Banner ===== -->
   <div style="background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;border-radius:16px;padding:32px 36px;margin-bottom:36px;position:relative;overflow:hidden;">
@@ -1635,7 +1650,7 @@ body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;backgroun
 </div>
 
 
-<div id="budget-section" style="margin-top:48px;">
+<div id="budget-section" style="margin-top:48px;max-width:1300px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px;padding-bottom:40px;box-sizing:border-box;">
 
   <!-- ===== Section Banner ===== -->
   <div style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);color:#fff;border-radius:16px;padding:32px 36px;margin-bottom:36px;position:relative;overflow:hidden;">
